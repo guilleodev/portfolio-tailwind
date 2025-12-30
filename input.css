@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+    /* Colores */
+    --color-primary: #bfbfbf;
+
+    /* Breakpoints */
+    --breakpoint-xs: 350px;
+}
+
+.social-button {
+    @apply p-2 size-10 xs:size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform;
+}
+
+.bg-main {
+    @apply max-w-xl mx-auto min-h-dvh bg-linear-to-b from-black via-sky-950 to-gray-800
+}
+
+.username-chip {
+    @apply  text-sky-400 text-xl font-mono px-3 py-1 border rounded-full shadow-xs flex items-center justify-center bg-black/60 cursor-crosshair z-10
+}
