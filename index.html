@@ -1,20 +1,84 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuilleLab</title>
     <link rel="stylesheet" href="./output.css">
-
 </head>
 
 <body class="bg-main">
-    <header class="text-white">
+    <header class="bg-transparent text-white md:mx-auto py-8">
+        <nav class="relative flex items-center justify-center">
+            <ul class="hidden md:flex flex-row justify-center items-center gap-6 text-[14px]
+             animate-slide-up-fade animate-duration-1000
+             sm:gap-14 lg:gap-20">
+                <li>
+                    <a href="index.html" class="hover:scale-110 transition-transform">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#proyectos" class="hover:scale-110 transition-transform">
+                        Proyectos
+                    </a>
+                </li>
+                <li>
+                    <a href="#experiencia" class="hover:scale-110 transition-transform">
+                        Experiencia
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" class="hover:scale-110 transition-transform">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+            <button id="menuBtn" class="md:hidden absolute right-6 top-1/2 -translate-y-1/2
+             p-2 rounded-xl border border-white/20
+             hover:bg-white/10 transition" aria-label="Abrir menú" aria-expanded="false" type="button">
+                <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden mt-6 animate-slide-up-fade animate-duration-500">
+            <ul class="flex flex-col items-center gap-6 text-[14px]">
+                <li>
+                    <a href="index.html" class="hover:scale-110 transition-transform block">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#proyectos" class="hover:scale-110 transition-transform block">
+                        Proyectos
+                    </a>
+                </li>
+                <li>
+                    <a href="#experiencia" class="hover:scale-110 transition-transform block">
+                        Experiencia
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto" class="hover:scale-110 transition-transform block">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="text-white">
         <img alt="guilleodev en su setup" src="./assets/me-pc.jpg"
             class="h-90 object-cover mask-radial-at-center mask-radial-from-50% mask-radial-to-75% animate-pulse-fade-in animate-duration-1000">
 
-        <header class="flex flex-col justify-center items-center -mt-2">
+        <div class="flex flex-col justify-center items-center -mt-2">
             <span class="username-chip hover:scale-110 transition-transform animate-hang animate-duration-1000">
                 @GuilleODEV
                 <svg class="ml-1 w-5 h-5 text-sky-400 inline" fill="currentColor" viewBox="0 0 20 20"
@@ -28,7 +92,7 @@
                 class="text-2xl text-center font-extrabold leading-tight mt-1 mb-5 animate-swing-drop-in animate-duration-1000">
                 Guillermo Redondo Camacho
             </h1>
-        </header>
+        </div>
 
         <section class="flex gap-2 justify-center">
             <a class="bg-violet-300 social-button animate-slide-up-fade animate-duration-1000"
@@ -64,159 +128,150 @@
         </section>
 
         <main class="pt-4">
-            <h1 class="font-bold mt-6">Información general</h1>
-            <div class="grid grid-cols-2 grid-rows-1 gap-2 w-full my-2 ">
-                <p
-                    class="text-primary text-center mt-4 py-2 text-xs tracking-tight px-2 text-balance col-span-1 rounded-xl bg-linear-to-br from-blue-700 via-blue-800 to-blue-600 border border-zinc-100 hover:text-white transition">
-                    Este portfolio es un proyecto de aprendizaje desarrollado tras la realización de un
-                    <a href="https://midu.dev/curso/tailwind-desde-cero/"><span
-                            class="text-black hover:text-white hover:bg-blue-500 font-bold cursor-pointer transition">curso
-                            de
-                            Tailwind
-                            CSS</span></a>
-                    .
-                </p>
-                <p
-                    class="text-primary text-center mt-4 py-2 text-xs tracking-tight px-2 text-balance col-span-1 bg-blue-800
-                    rounded-xl bg-linear-to-br from-blue-700 via-blue-800 to-blue-600 border border-zinc-100 hover:text-white transition">
-                    Cada sección, tarjeta o proyecto está pensado para simular casos reales de desarrollo web y los
-                    enlaces son
-                    ficticios.
-                </p>
-            </div>
-            <h1 class="font-bold mt-8 mb-6">Proyectos</h1>
-            <div class="grid grid-cols-3 grid-rows-2 gap-4 w-full">
-                <a href="https://github.com/guirecam" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-cyan-700 via-cyan-700 to-black-500 border border-cyan-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
+            <div class="py-2" id="proyectos">
+                <h1 class="font-bold mt-8 mb-6 animate-slide-up-fade animate-duration-1000">Proyectos</h1>
+                <div class="grid grid-cols-3 grid-rows-2 gap-4 w-full">
+                    <a href="/pages/react-projects.html" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-cyan-700 via-cyan-700 to-black-500 border border-cyan-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
                     group animate-slide-up-fade animate-duration-1000">
-                    <span
-                        class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">React</span>
-                    <svg
-                        class="absolute -right-20 -bottom-4 -rotate-6 group-hover:-rotate-20 group-hover:scale-125 transition-transform">
-                        <use xlink:href="./assets/sprite.svg#react" />
-                    </svg>
-                    <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de React</span>
-                </a>
-                <a href="https://github.com/guirecam" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-[#339933] via-[#339933] to-black-500 border border-green-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-1 p-7 min-h-45
+                        <span
+                            class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">React</span>
+                        <svg
+                            class="absolute -right-20 -bottom-4 -rotate-6 group-hover:-rotate-20 group-hover:scale-125 transition-transform">
+                            <use xlink:href="./assets/sprite.svg#react" />
+                        </svg>
+                        <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de
+                            React</span>
+                    </a>
+                    <a href="https://github.com/guirecam" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-[#339933] via-[#339933] to-black-500 border border-green-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-1 p-7 min-h-45
                     group animate-slide-up-fade animate-duration-1000">
-                    <span
-                        class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">Node.js</span>
-                    <svg
-                        class="absolute -right-15 -bottom-4 -rotate-6 group-hover:-rotate-20 size-30 group-hover:scale-125 transition-transform">
-                        <use xlink:href="./assets/sprite.svg#node" />
-                    </svg>
-                    <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de Node.js</span>
-                </a>
-                <a href="https://github.com/guirecam" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-[#3178C6] via-[#3178C6] to-black-500 border border-blue-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-1 p-7 min-h-45
+                        <span
+                            class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">Node.js</span>
+                        <svg
+                            class="absolute -right-15 -bottom-4 -rotate-6 group-hover:-rotate-20 size-30 group-hover:scale-125 transition-transform">
+                            <use xlink:href="./assets/sprite.svg#node" />
+                        </svg>
+                        <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de
+                            Node.js</span>
+                    </a>
+                    <a href="https://github.com/guirecam" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-[#3178C6] via-[#3178C6] to-black-500 border border-blue-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-1 p-7 min-h-45
                     group animate-slide-up-fade animate-duration-1000">
-                    <span
-                        class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">Typescript</span>
-                    <svg
-                        class="absolute -right-5 -bottom-1 -top-2 group-hover:-rotate-10 size-30 mov group-hover:scale-125 group-hover:translate-y[-10px] transition-transform mask-radial-at-top-right mask-radial-from-50% mask-radial-to-100%">
-                        <use xlink:href="./assets/sprite.svg#typescript" />
-                    </svg>
-                    <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de
-                        Typescript</span>
-                </a>
-                <a href="https://github.com/guirecam" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-[#E44D26] via-[#E44D26] to-black-300 border border-orange-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 p-7 min-h-45
+                        <span
+                            class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">Typescript</span>
+                        <svg
+                            class="absolute -right-5 -bottom-1 -top-2 group-hover:-rotate-10 size-30 mov group-hover:scale-125 group-hover:translate-y[-10px] transition-transform mask-radial-at-top-right mask-radial-from-50% mask-radial-to-100%">
+                            <use xlink:href="./assets/sprite.svg#typescript" />
+                        </svg>
+                        <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de
+                            Typescript</span>
+                    </a>
+                    <a href="https://github.com/guirecam" class="relative rounded-3xl overflow-hidden bg-linear-to-br from-[#E44D26] via-[#E44D26] to-black-300 border border-orange-500 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 p-7 min-h-45
                     group animate-slide-up-fade animate-duration-1000">
-                    <span
-                        class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">HTML</span>
-                    <svg
-                        class="absolute -right-22 -bottom-4 group-hover:-rotate-10 group-hover:scale-125 transition-transform">
-                        <use xlink:href="./assets/sprite.svg#html" />
-                    </svg>
-                    <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de HTML</span>
-                </a>
+                        <span
+                            class="absolute bottom-2 left-3 font-bold text-2xl group-hover:scale-115 transition-transform">HTML</span>
+                        <svg
+                            class="absolute -right-22 -bottom-4 group-hover:-rotate-10 group-hover:scale-125 transition-transform">
+                            <use xlink:href="./assets/sprite.svg#html" />
+                        </svg>
+                        <span class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1">Proyectos de HTML</span>
+                    </a>
 
+                </div>
             </div>
-            <h1 class="font-bold mt-8 mb-6">Experiencia</h1>
-            <div class="grid grid-cols-1 grid-rows-3 gap-4 w-full">
-                <a href="https://github.com/guirecam" class="relative p-7 min-h-45 rounded-3xl overflow-hidden border-2 border-zinc-100 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
+            <div class="py-2" id="experiencia">
+                <h1 class="font-bold mt-8 mb-6 animate-slide-up-fade animate-duration-1000" id="experiencia">Experiencia
+                </h1>
+                <div class="grid grid-cols-1 grid-rows-3 gap-4 w-full">
+                    <a href="https://github.com/guirecam" class="relative p-7 min-h-45 rounded-3xl overflow-hidden border-2 border-zinc-100 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
                     group animate-slide-up-fade animate-duration-1000">
-                    <span
-                        class="absolute top-10 left-3 font-bold text-xl group-hover:scale-102 group-hover:underline underline-offset-1.5 transition-transform">Desarrollador
-                        Web Senior</span>
-                    <span
-                        class="absolute top-18 left-3 font-bold text-xs group-hover:scale-105 transition-transform">2023-2025</span>
-                    <span
-                        class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1 group-hover:bg-zinc-200 group-hover:text-black transition">Google</span>
-                    <span
-                        class="absolute top-26 w-90 left-1 text-xs px-2 group-hover:scale-102 transition-transform">Desarrollo
-                        de interfaces web
-                        escalables, optimización de rendimiento y colaboración con equipos de producto en proyectos
-                        internos.</span>
-                    <img src="./assets/img/logoGoogle.png" alt="logo de Google"
-                        class="absolute -right-3 -bottom-4 contrast-50 size-20 -z-1 opacity-50 md:size-40 lg:size-50 group-hover:-rotate-20 group-hover:scale-125 group-hover:contrast-100 group-hover:opacity-100 transition-transform">
-                </a>
-                <a href="https://github.com/guirecam" class="relative p-7 min-h-45 rounded-3xl overflow-hidden border-2 border-zinc-100 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
+                        <span
+                            class="absolute top-10 left-3 font-bold text-xl group-hover:scale-102 group-hover:underline underline-offset-1.5 transition-transform">Desarrollador
+                            Web Senior</span>
+                        <span
+                            class="absolute top-18 left-3 font-bold text-xs group-hover:scale-105 transition-transform">2023-2025</span>
+                        <span
+                            class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1 group-hover:bg-zinc-200 group-hover:text-black transition">Google</span>
+                        <span
+                            class="absolute top-26 w-90 left-1 text-xs px-2 group-hover:scale-102 transition-transform">Desarrollo
+                            de interfaces web
+                            escalables, optimización de rendimiento y colaboración con equipos de producto en proyectos
+                            internos.</span>
+                        <img src="./assets/img/logoGoogle.png" alt="logo de Google"
+                            class="absolute -right-3 -bottom-4 contrast-50 size-20 -z-1 opacity-50 md:size-40 lg:size-50 group-hover:-rotate-20 group-hover:scale-125 group-hover:contrast-100 group-hover:opacity-100 transition-transform">
+                    </a>
+                    <a href="https://github.com/guirecam" class="relative p-7 min-h-45 rounded-3xl overflow-hidden border-2 border-zinc-100 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
                     group animate-slide-up-fade animate-duration-1000">
-                    <span
-                        class="absolute top-10 left-3 font-bold text-xl group-hover:scale-102 group-hover:underline underline-offset-1.5 transition-transform">Frontend
-                        Developer</span>
-                    <span
-                        class="absolute top-18 left-3 font-bold text-xs group-hover:scale-105 transition-transform">2022-2023</span>
-                    <span
-                        class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1 group-hover:bg-zinc-200 group-hover:text-black transition">Facebook
-                        (Meta)</span>
-                    <span
-                        class="absolute top-26 w-90 left-1 text-xs px-2 group-hover:scale-102 transition-transform">Implementación
-                        de componentes en React, mejora de la experiencia de usuario y mantenimiento de aplicaciones web
-                        de alto tráfico.</span>
-                    <img src="./assets/img/logoFacebook.png" alt="logo de Google"
-                        class="absolute -right-3 -bottom-4 contrast-50 size-20 -z-1 opacity-50 md:size-40 lg:size-50 group-hover:-rotate-20 group-hover:scale-125 group-hover:contrast-100 group-hover:opacity-100 transition-transform">
-                </a>
-                <a href="https://github.com/guirecam" class="relative p-7 min-h-45 rounded-3xl overflow-hidden border-2 border-zinc-100 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
+                        <span
+                            class="absolute top-10 left-3 font-bold text-xl group-hover:scale-102 group-hover:underline underline-offset-1.5 transition-transform">Frontend
+                            Developer</span>
+                        <span
+                            class="absolute top-18 left-3 font-bold text-xs group-hover:scale-105 transition-transform">2022-2023</span>
+                        <span
+                            class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1 group-hover:bg-zinc-200 group-hover:text-black transition">Facebook
+                            (Meta)</span>
+                        <span
+                            class="absolute top-26 w-90 left-1 text-xs px-2 group-hover:scale-102 transition-transform">Implementación
+                            de componentes en React, mejora de la experiencia de usuario y mantenimiento de aplicaciones
+                            web
+                            de alto tráfico.</span>
+                        <img src="./assets/img/logoFacebook.png" alt="logo de Google"
+                            class="absolute -right-3 -bottom-4 contrast-50 size-20 -z-1 opacity-50 md:size-40 lg:size-50 group-hover:-rotate-20 group-hover:scale-125 group-hover:contrast-100 group-hover:opacity-100 transition-transform">
+                    </a>
+                    <a href="https://github.com/guirecam" class="relative p-7 min-h-45 rounded-3xl overflow-hidden border-2 border-zinc-100 flex flex-col items-start hover:scale-105 hover:contrast-125 transition col-span-2 
                     group animate-slide-up-fade animate-duration-1000">
-                    <span
-                        class="absolute top-10 left-3 font-bold text-xl group-hover:scale-102 group-hover:underline underline-offset-1.5 transition-transform">Desarrollador
-                        Web Junior</span>
-                    <span
-                        class="absolute top-18 left-3 font-bold text-xs group-hover:scale-105 transition-transform">2021-2023</span>
-                    <span
-                        class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1 group-hover:bg-zinc-200 group-hover:text-black transition">Amazon</span>
-                    <span
-                        class="absolute top-26 w-90 left-1 text-xs px-2 group-hover:scale-102 transition-transform">Desarrollo
-                        y mantenimiento de herramientas internas, creación de dashboards y optimización de interfaces
-                        orientadas a datos.</span>
-                    <img src="./assets/img/logoAmazon.png" alt="logo de Google"
-                        class="absolute -right-3 -bottom-4 contrast-50 size-20 -z-1 opacity-50 md:size-40 lg:size-50 group-hover:-rotate-20 group-hover:scale-125 group-hover:contrast-100 group-hover:opacity-100 transition-transform">
-                </a>
+                        <span
+                            class="absolute top-10 left-3 font-bold text-xl group-hover:scale-102 group-hover:underline underline-offset-1.5 transition-transform">Desarrollador
+                            Web Junior</span>
+                        <span
+                            class="absolute top-18 left-3 font-bold text-xs group-hover:scale-105 transition-transform">2021-2023</span>
+                        <span
+                            class="absolute top-2 left-2 text-xs border rounded-xl px-2 py-1 group-hover:bg-zinc-200 group-hover:text-black transition">Amazon</span>
+                        <span
+                            class="absolute top-26 w-90 left-1 text-xs px-2 group-hover:scale-102 transition-transform">Desarrollo
+                            y mantenimiento de herramientas internas, creación de dashboards y optimización de
+                            interfaces
+                            orientadas a datos.</span>
+                        <img src="./assets/img/logoAmazon.png" alt="logo de Google"
+                            class="absolute -right-3 -bottom-4 contrast-50 size-20 -z-1 opacity-50 md:size-40 lg:size-50 group-hover:-rotate-20 group-hover:scale-125 group-hover:contrast-100 group-hover:opacity-100 transition-transform">
+                    </a>
+                </div>
             </div>
-            <h1 class="font-bold mt-8 mb-6">Contacto</h1>
-            <div class="w-full">
-                <form class="space-y-3 group">
-                    <input type="text" placeholder="Tu nombre" class="w-full rounded-xl bg-cyan-950/70 px-4 py-3 text-white text-xs
+            <div class="py-2" id="contacto">
+                <h1 class="font-bold mt-8 mb-6 animate-slide-up-fade animate-duration-1000">Contacto</h1>
+                <div class="w-full">
+                    <form class="space-y-3 group">
+                        <input type="text" placeholder="Tu nombre" class="w-full rounded-xl bg-cyan-950/70 px-4 py-3 text-white text-xs
                    border border-cyan-800
                    placeholder:text-cyan-400
                    focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/40
                    transition-all duration-300" />
-                    <input type="email" placeholder="Tu email" class="w-full rounded-xl bg-cyan-950/70 px-4 py-3 text-white text-xs
+                        <input type="email" placeholder="Tu email" class="w-full rounded-xl bg-cyan-950/70 px-4 py-3 text-white text-xs
                    border border-cyan-800
                    placeholder:text-cyan-400
                    focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/40
                    transition-all duration-300" />
-                    <textarea placeholder="Escribe aquí tu mensaje..." rows="4" class="w-full rounded-xl bg-cyan-950/70 px-4 py-3 text-white text-xs
+                        <textarea placeholder="Escribe aquí tu mensaje..." rows="4" class="w-full rounded-xl bg-cyan-950/70 px-4 py-3 text-white text-xs
                    border border-cyan-800
                    placeholder:text-cyan-400
                    focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/40
                    transition-all duration-300 resize-none"></textarea>
-                    <button type="button" class="w-full rounded-xl bg-linear-to-br from-cyan-700 to-cyan-500
+                        <button type="button" class="w-full rounded-xl bg-linear-to-br from-cyan-700 to-cyan-500
                    py-2 text-xs font-semibold text-white
                    opacity-70 cursor-not-allowed
                    transition-all duration-300
                    hover:opacity-90 hover:shadow-lg hover:shadow-cyan-500/30
                    active:scale-[0.98]">
-                        Enviar
-                    </button>
-                    <p class="text-center text-[10px] text-cyan-400/70 pt-1">
-                        Formulario visual · Sin funcionalidad backend
-                    </p>
-                </form>
+                            Enviar
+                        </button>
+                        <p class="text-center text-[10px] text-cyan-400/70 pt-1">
+                            Formulario visual · Sin funcionalidad backend
+                        </p>
+                    </form>
+                </div>
             </div>
 
         </main>
 
-    </header>
+    </div>
     <footer class="w-full text-zinc-300 pt-16 pb-12">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-6 items-center justify-between">
             <span class="text-sm">
@@ -235,6 +290,7 @@
 
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
