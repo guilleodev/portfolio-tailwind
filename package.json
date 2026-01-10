@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch --minify"
-  },
+  "dev": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+  "build": "npx @tailwindcss/cli -i ./input.css -o ./output.css --minify"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guilleodev/portfolio-tailwind.git"
