@@ -54,6 +54,6 @@ Por ahora es un proyecto personal, pero abierto a ideas y sugerencias.
 
 <p align="center">
   Hecho con ☕ por <strong>GuilleODEV</strong><br>
-  <a href="https://github.com/Guirecam">GitHub</a> · 
+  <a href="https://github.com/guilleodev">GitHub</a> · 
   <a href="https://www.linkedin.com/in/guillermo-redondo-camacho/">LinkedIn</a>
 </p>

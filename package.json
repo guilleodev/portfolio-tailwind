@@ -1,5 +1,5 @@
 {
-  "name": "guillelab",
+  "name": "portfolio-tailwind",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Guirecam/guilleLab.git"
+    "url": "git+https://github.com/guilleodev/portfolio-tailwind.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Guirecam/guilleLab/issues"
+    "url": "https://github.com/guilleodev/portfolio-tailwind/issues"
   },
-  "homepage": "https://github.com/Guirecam/guilleLab#readme",
+  "homepage": "https://guilleodev.github.io/portfolio-tailwind/",
   "dependencies": {
     "@midudev/tailwind-animations": "^0.2.0",
     "@tailwindcss/cli": "^4.1.18",
