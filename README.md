@@ -1,17 +1,22 @@
 # Plantilla Portfolio Personal - Tailwind CSS
-Plantilla de portfolio personal creada con Tailwind CSS como resultado de un proceso de aprendizaje enfocado en diseño UI moderno y desarrollo front-end.
 
-El objetivo es tener una base moderna, rápida y totalmente responsive para presentar un portfolio, con su perfil, habilidades y proyectos de forma clara y profesional.
+<a href="https://guilleodev.github.io/portfolio-tailwind/">
+<img src="https://raw.githubusercontent.com/guilleodev/portfolio-tailwind/main/capturaPlantillaPortfolioTailwind.png" width="700" />
+</a>
+
+Plantilla de portfolio desarrollada con Tailwind CSS, utilizando mis propios datos como ejemplo de implementación y diseño. 
+
+El proyecto está enfocado en mostrar una estructura moderna, responsive y fácilmente adaptable, pensada como base para portfolios personales de desarrolladores o perfiles creativos.
 
 # 🚀 Demo (GitHub Pages)
-🔗 En proceso...
+🔗 **Ver proyecto online:** https://guilleodev.github.io/portfolio-tailwind/
 
 # ⚙️ Características
 - Diseño 100% responsive (mobile-first)
-- Secciones típicas de portfolio: Hero / Proyectos / Experiencia...
+- Secciones típicas de portfolio: Hero / Proyectos / Experiencia / Conocimientos / Contacto
 - Componentes reutilizables (cards, badges, botones, etc.)
 - Estilo moderno con gradientes, sombras y efectos hover
-- Código limpio y escalable (ideal para seguir ampliándolo)
+- Código limpio y escalable
 
 # 🛠️ Tecnologías utilizadas
 - **HTML5**
@@ -35,17 +40,13 @@ El objetivo es tener una base moderna, rápida y totalmente responsive para pres
     │   ├── logoGoogle.png
     │   ├── logoFacebook.png
     │   └── logoAmazon.png
+        ...
     └── sprite.svg
 
 ```
     
 # 🌡️ Estado del proyecto
-**En desarrollo**  
-Actualmente añadiendo:
-- Contenido
-- Animaciones
-- Optimización del diseño responsive
-- Actualizaciones en el README
+**Completado**  
 
 # 🤝 Contribuciones
 Por ahora es un proyecto personal, pero abierto a ideas y sugerencias.
