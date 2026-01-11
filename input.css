@@ -25,7 +25,7 @@
 }
 
 .bg-main {
-    @apply  max-w-162.5 mx-auto min-h-dvh bg-linear-to-b from-black via-sky-950 to-gray-800 px-3
+    @apply  max-w-220 mx-auto min-h-dvh bg-linear-to-b from-black via-sky-950 to-gray-800 px-3
 }
 
 .username-chip {
